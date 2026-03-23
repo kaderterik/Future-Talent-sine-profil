@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sine-Profil | Film Ruhun Hangi Karakter?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="noise-layer"></div>
+    <main class="app-container">
+      <header class="app-header glass-card">
+        <div class="header-top">
+          <div class="brand">
+            <div class="brand-logo">SP</div>
+            <div>
+              <h1 class="brand-title">Sine-Profil</h1>
+              <p>Film ve dizi ruhun hangi karakter? 4 içerikle keşfet.</p>
+            </div>
+          </div>
+          <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Temayı değiştir">
+            Tema: Dark
+          </button>
+        </div>
+      </header>
+
+      <section class="search-section glass-card">
+        <h2>Favori Film ve Dizilerini Seç</h2>
+        <p class="section-subtitle">Arama yap, 4 film/dizi seç ve kişilik analizini gör.</p>
+        <div class="name-wrapper">
+          <label for="userNameInput">İsmin</label>
+          <input id="userNameInput" type="text" maxlength="40" placeholder="Adını yaz (örn: Kader)" />
+        </div>
+        <div class="search-wrapper">
+          <input
+            id="movieSearchInput"
+            type="text"
+            placeholder="Film veya dizi adı yaz... (örn: Interstellar, Dark)"
+            autocomplete="off"
+          />
+          <ul id="searchResults" class="search-results"></ul>
+        </div>
+      </section>
+
+      <section class="selected-section glass-card">
+        <div class="section-head">
+          <h2>Seçili İçerikler</h2>
+          <span id="selectedCounter">0 / 4 seçildi</span>
+        </div>
+        <div id="selectedMovies" class="selected-movies"></div>
+      </section>
+
+      <section class="actions-section">
+        <button id="analyzeBtn" class="primary-btn" disabled>Analiz Et</button>
+      </section>
+
+      <section id="resultPanel" class="result-section glass-card hidden">
+        <h2 id="personalityType">Kişilik Tipi</h2>
+        <p id="personalityDescription"></p>
+        <div class="chart-wrap">
+          <canvas id="profileChart"></canvas>
+        </div>
+        <button id="shareBtn" class="secondary-btn">Sonuçları Paylaş</button>
+        <button id="resetBtn" class="secondary-btn">Yeni Kişi İçin Sıfırla</button>
+      </section>
+    </main>
+  </body>
+</html>
