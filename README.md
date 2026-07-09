@@ -11,6 +11,7 @@ Bu proje, **Future Talent programı** eğitimi kapsamında öğrenilen bilgileri
 ## 🚀 Canlı Uygulama
 
 https://sine-profil.netlify.app/
+
 https://kaderterik.github.io/Future-Talent-sine-profil/
 
 ---
